@@ -391,11 +391,11 @@ ${datasetInfo}
 กรุณาตอบคำถามตามข้อมูลที่มีเท่านั้น`;
 
     try {
-        const result = await chatModel.generateContent({
-            contents: [{ role: 'user', parts: [{ text: userPrompt }] }],
-            systemInstruction: systemInstruction,
-            generationConfig: { temperature: 0.2, maxOutputTokens: 1000 }
-        });
+    const result = await chatModel.generateContent({
+        contents: [{ role: 'user', parts: [{ text: userPrompt }] }],
+        systemInstruction: systemInstruction,
+        generationConfig: { temperature: 0.2, maxOutputTokens: 1000 }
+    });
         
         const answer = result.response.text();
         
